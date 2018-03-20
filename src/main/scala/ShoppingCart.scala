@@ -1,15 +1,18 @@
 object ShoppingCart {
+
   def main(args: Array[String]) = {
 
   }
+  val OrangeCost = 0.25
+  val AppleCost = 0.6
 
   def checkout(items: Array[String]) =
     items.foldLeft(0.0) {(sum, i) =>
       sum + (
         if (i == "orange")
-         0.25
+         OrangeCost
         else if (i == "apple")
-         0.6
+         AppleCost
         else
           0.0 // all other items are free
         )
